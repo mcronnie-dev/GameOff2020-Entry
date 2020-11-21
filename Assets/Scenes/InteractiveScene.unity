@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2116323588}
-  m_IndirectSpecularColor: {r: 0.85306275, g: 0.8312679, b: 0.80977553, a: 1}
+  m_IndirectSpecularColor: {r: 0.8530671, g: 0.83132, b: 0.8098277, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -946,7 +946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &77992779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4071,7 +4071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &470976752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7538,7 +7538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &890579055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14376,6 +14376,21 @@ MonoBehaviour:
   StoneCount: 0
   stoneAware:
   - {fileID: 406497172}
+--- !u!114 &1565551305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565551297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5126924a7a6a7b41a44e4394bac69be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  RotationSpeed: 240
+  jump_Force: 10
 --- !u!1001 &1567600613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19599,11 +19614,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8263505501894499131, guid: e5efcffe595452b46bdff559f6f6991e,
-        type: 3}
-      propertyPath: m_Name
-      value: txtMagicStone
-      objectReference: {fileID: 0}
     - target: {fileID: 8263505502537930587, guid: e5efcffe595452b46bdff559f6f6991e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19788,6 +19798,31 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1555010935}
+    - target: {fileID: 8986782268435948939, guid: 51062514d99e58b43848f08d79a58523,
+        type: 3}
+      propertyPath: m_YAxis.Value
+      value: 0.650051
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986782268435948939, guid: 51062514d99e58b43848f08d79a58523,
+        type: 3}
+      propertyPath: m_Orbits.Array.data[0].m_Radius
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986782268435948939, guid: 51062514d99e58b43848f08d79a58523,
+        type: 3}
+      propertyPath: m_Orbits.Array.data[1].m_Height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986782268435948939, guid: 51062514d99e58b43848f08d79a58523,
+        type: 3}
+      propertyPath: m_Orbits.Array.data[1].m_Radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986782268435948939, guid: 51062514d99e58b43848f08d79a58523,
+        type: 3}
+      propertyPath: m_Orbits.Array.data[2].m_Radius
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8986782268435948940, guid: 51062514d99e58b43848f08d79a58523,
         type: 3}
       propertyPath: m_Name

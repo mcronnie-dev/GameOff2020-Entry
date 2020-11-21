@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 8263505501894499128}
   - component: {fileID: 8263505501894499129}
   m_Layer: 5
-  m_Name: txtStone
+  m_Name: txtMagicStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
