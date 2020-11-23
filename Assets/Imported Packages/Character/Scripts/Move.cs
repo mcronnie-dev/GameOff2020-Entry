@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
 
     private float Gravity = 50.0f;
     public float jump_Force = 10f;
-    private float vertical_Velocity;
+    private float vertical_Velocity; 
 
 
     private Vector3 _moveDir = Vector3.zero;
@@ -25,6 +25,9 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Sprint
+        Sprint();
+
         // Get Input for axis
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -68,6 +71,17 @@ public class Move : MonoBehaviour
         if (_characterController.isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
         {
             vertical_Velocity = jump_Force;
+        }
+    }
+
+    void Sprint() {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Speed = 24.0f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Speed = 5.0f;
         }
     }
 }
