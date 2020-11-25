@@ -15,6 +15,7 @@ public class MagicStonePickup : MonoBehaviour
 
             if (stone != null)
             {
+                print("magic stone destroyed");
                 stone.ModifyStoneCount();
                 Destroy(gameObject);
             }

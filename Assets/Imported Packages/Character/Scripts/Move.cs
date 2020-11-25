@@ -5,6 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     private CharacterController _characterController;
+    public Animator anim;
 
     public float Speed = 5.0f;
 
@@ -20,6 +21,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class Move : MonoBehaviour
 
         _moveDir.y -= Gravity * Time.deltaTime;
 
-        //ApplyGravity();
+        ApplyGravity();
 
         _characterController.Move(_moveDir * Time.deltaTime);
     }
@@ -61,16 +63,18 @@ public class Move : MonoBehaviour
     {
         vertical_Velocity -= Gravity * Time.deltaTime;
 
-        //PlayerJump();
+        PlayerJump();
 
         _moveDir.y = vertical_Velocity * Time.deltaTime;
     }
 
     void PlayerJump()
     {
-        if (_characterController.isGrounded && Input.GetKeyDown(KeyCode.LeftShift))
+        if (_characterController.isGrounded && Input.GetKeyDown(KeyCode.X))
         {
+            gameObject.GetComponent<Animation>().enabled = false;
             vertical_Velocity = jump_Force;
+            gameObject.GetComponent<Animation>().enabled = true;
         }
     }
 

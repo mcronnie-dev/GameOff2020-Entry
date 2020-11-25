@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8498525960626996551}
   - component: {fileID: 1585444925730829556}
   - component: {fileID: 8791180376940255299}
+  - component: {fileID: 541846081}
   m_Layer: 0
   m_Name: MagicStone
   m_TagString: Untagged
@@ -108,3 +109,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
+--- !u!114 &541846081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611402502801974862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37717c20eae4c64e842dddc6adf8665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoneCount: 0
+  stoneAware: []
