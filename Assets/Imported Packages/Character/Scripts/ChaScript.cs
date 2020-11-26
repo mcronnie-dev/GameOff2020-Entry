@@ -58,4 +58,16 @@ public class ChaScript : MonoBehaviour
             anim.SetBool("Attack", false);
         }
     }
+
+    public void FireWeapon()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
+    }
 }
