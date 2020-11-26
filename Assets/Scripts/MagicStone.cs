@@ -22,8 +22,6 @@ public class MagicStone : MonoBehaviour
         StoneCount += 1;
         print("Modify stone count now " + StoneCount);
 
-        //if (StoneCount > 5) Win();
-        //else
         SetStoneCount(StoneCount);
     }
 

@@ -5,14 +5,13 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     private CharacterController _characterController;
-    public Animator anim;
 
     public float Speed = 5.0f;
 
-    public float RotationSpeed = 240.0f;
+    public float RotationSpeed = 100.0f;
 
-    private float Gravity = 50.0f;
-    public float jump_Force = 10f;
+    public float Gravity = 800.0f;
+    public float jump_Force = 1000.0f;
     private float vertical_Velocity; 
 
 
@@ -21,7 +20,6 @@ public class Move : MonoBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -70,11 +68,14 @@ public class Move : MonoBehaviour
 
     void PlayerJump()
     {
-        if (_characterController.isGrounded && Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.RightShift))
         {
-            gameObject.GetComponent<Animation>().enabled = false;
+            print("jump");
             vertical_Velocity = jump_Force;
-            gameObject.GetComponent<Animation>().enabled = true;
+        }
+        if (Input.GetKeyUp(KeyCode.RightShift)) {
+            print("not jump");
+            vertical_Velocity = 0.0f;
         }
     }
 

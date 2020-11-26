@@ -7,6 +7,7 @@ public class SpawnInfinityStones : MonoBehaviour
     public Vector3 center;
     public Vector3 size;
     public GameObject infinityStones;
+    public CharacterController characterCharacter;
 
     // Start is called before the first frame update
     void Start()

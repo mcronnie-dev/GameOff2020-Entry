@@ -24,5 +24,9 @@ public class MagicStoneUI : MonoBehaviour
     {
         print("stone count" + currentStoneCount);
         currentStoneCount = newStoneCount;
+
+/*        if (newStoneCount >= 1) {
+            GameObject.Find("LevelLoader").GetComponent<LevelLoader>().LoadNextLevel();
+        }*/
     }
 }
