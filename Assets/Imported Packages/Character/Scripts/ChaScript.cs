@@ -49,6 +49,12 @@ public class ChaScript : MonoBehaviour
             anim.SetBool("RunBack", false);
         }
 
+        FireWeapon();
+        
+    }
+
+    public void FireWeapon()
+    {
         if (Input.GetKey(KeyCode.Space))
         {
             anim.SetBool("Attack", true);

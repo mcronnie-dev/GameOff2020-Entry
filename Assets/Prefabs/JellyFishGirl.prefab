@@ -1103,10 +1103,14 @@ GameObject:
   - component: {fileID: 4426228947402382435}
   - component: {fileID: 4426228947399198933}
   - component: {fileID: 4426228946797222053}
-  - component: {fileID: 4426228946797222050}
+  - component: {fileID: 1754036098}
+  - component: {fileID: 1754036093}
+  - component: {fileID: 1754036097}
+  - component: {fileID: 1754036099}
+  - component: {fileID: 1754036100}
   m_Layer: 0
   m_Name: JellyFishGirl
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1118,7 +1122,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4426228947409721595}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1127,7 +1131,7 @@ Transform:
   - {fileID: 4426228947410042531}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!95 &4426228947402382435
 Animator:
   serializedVersion: 3
@@ -1177,7 +1181,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.2, z: 0}
---- !u!114 &4426228946797222050
+--- !u!54 &1754036098
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426228947409721595}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1754036093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1186,12 +1206,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 4426228947409721595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7953487de8baee741860f4a26861c4cd, type: 3}
+  m_Script: {fileID: 11500000, guid: f5126924a7a6a7b41a44e4394bac69be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  RotationSpeed: 240
-  jump_Force: 10
+  Speed: 6.13
+  RotationSpeed: 100
+  Gravity: 10000
+  jump_Force: 1000
+--- !u!114 &1754036097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426228947409721595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37717c20eae4c64e842dddc6adf8665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoneCount: 0
+  stoneAware: []
+--- !u!114 &1754036099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426228947409721595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8af1dbde367bc64ea2dc4497649821c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthAware:
+  - {fileID: 0}
+--- !u!114 &1754036100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426228947409721595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f03493d9865817469b563113d653bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decal: {fileID: 100006, guid: 9e95c7b2183a4f345aaf86846f8f1918, type: 3}
+  _impactForce: 100
+  _damageAmount: 20
+  _fireRate: 1
 --- !u!1 &4426228947409723949
 GameObject:
   m_ObjectHideFlags: 0
