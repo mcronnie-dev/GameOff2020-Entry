@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMenu.unity
     guid: 8df721aeb38335e47a578ef199d924e7
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
-    guid: 568b4b9cf0891f8429b0e5bff72a15db
+    path: Assets/Scenes/IntroScene.unity
+    guid: e709e386f2ead6d49ac3be672deb47c3
   - enabled: 1
-    path: Assets/Scenes/InteractiveScene.unity
-    guid: 38cffd5319541714eb74d8e029f468b5
+    path: Assets/Scenes/StartScene.unity
+    guid: 070cbfd0650a4ff4aa32b50cd0f04f38
+  - enabled: 1
+    path: Assets/Scenes/FiringEffect.unity
+    guid: 31c6fe2299a65074097f0aa36e6e3316
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
