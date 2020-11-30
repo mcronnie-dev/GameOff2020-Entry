@@ -13,12 +13,6 @@ public class GameOver : MonoBehaviour
         GetComponent<AudioSource>().clip = gameOverClip;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

@@ -22,6 +22,5 @@ public class MagicStoneUI : MonoBehaviour
     public void SetStoneCount(int newStoneCount)
     {
         currentStoneCount = newStoneCount;
-
     }
 }

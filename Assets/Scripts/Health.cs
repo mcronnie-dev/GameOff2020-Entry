@@ -60,29 +60,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-//        Time.timeScale = 0f;
-        RestartLevel();
+        //        Time.timeScale = 0f;
+        FindObjectOfType<LevelLoader>().RestartLevel();
     }
-
-
-    /* GAME OVER */
-
-    public void RestartLevel()
-    {
-        print("restart");
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
-    }
-
-    IEnumerator LoadLevel(int levelIndex)
-    {
-        // start animation
-        transition.SetTrigger("Start");
-
-        // wait
-        yield return new WaitForSeconds(transitionTime);
-
-        // play scene
-        SceneManager.LoadScene(levelIndex);
-    }
-
 }
