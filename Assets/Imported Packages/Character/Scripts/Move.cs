@@ -68,12 +68,12 @@ public class Move : MonoBehaviour
 
     void PlayerJump()
     {
-        if (Input.GetKeyDown(KeyCode.RightShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             print("jump");
             vertical_Velocity = jump_Force;
         }
-        if (Input.GetKeyUp(KeyCode.RightShift)) {
+        if (Input.GetKeyUp(KeyCode.Space)) {
             print("not jump");
             vertical_Velocity = 0.0f;
         }
