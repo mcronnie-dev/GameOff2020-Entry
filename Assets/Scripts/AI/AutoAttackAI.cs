@@ -115,7 +115,7 @@ public class AutoAttackAI : MonoBehaviour
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
-        //transform.LookAt(player);
+        transform.LookAt(player);
 
         if (!alreadyAttacked){
 
