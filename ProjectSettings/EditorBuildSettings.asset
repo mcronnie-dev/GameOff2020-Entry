@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 070cbfd0650a4ff4aa32b50cd0f04f38
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FiringEffect.unity
     guid: 31c6fe2299a65074097f0aa36e6e3316
+  - enabled: 1
+    path: Assets/Scenes/BridgeScene.unity
+    guid: d5d05584460c2e74da779937ea24f83e
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

@@ -2,11 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Collider))]
 public class Health : MonoBehaviour
 {
+    public Animator transition;
+    public float transitionTime = 1f;
+
+
     public float health = 100f;
     private float _minHealth, _maxHealth;
     //private Invulnerability _inv;
@@ -55,6 +60,29 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Time.timeScale = 0f;
+//        Time.timeScale = 0f;
+        RestartLevel();
     }
+
+
+    /* GAME OVER */
+
+    public void RestartLevel()
+    {
+        print("restart");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        // start animation
+        transition.SetTrigger("Start");
+
+        // wait
+        yield return new WaitForSeconds(transitionTime);
+
+        // play scene
+        SceneManager.LoadScene(levelIndex);
+    }
+
 }

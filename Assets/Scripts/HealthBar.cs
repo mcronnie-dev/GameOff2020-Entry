@@ -16,7 +16,8 @@ public class HealthBar : HealthUI
 
     private void SetColor()
     {
-        float healthRatio = currentHealth / maxHealth;
+        print("curr health " + currentHealth + " maxhealth " + maxHealth);
+        float healthRatio = (currentHealth == 0 && maxHealth == 0) ? 0 : currentHealth / maxHealth;
         _image.fillAmount = healthRatio;
         _image.color = gradient.Evaluate(healthRatio);
     }

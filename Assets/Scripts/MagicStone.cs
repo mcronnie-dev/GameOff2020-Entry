@@ -12,7 +12,6 @@ public class MagicStone : MonoBehaviour
     {
         foreach (GameObject go in stoneAware)
         {
-            print("stoneaware ");
             go.SendMessage(nameof(SetStoneCount), newStoneCount, SendMessageOptions.DontRequireReceiver);
         }
     }
@@ -20,7 +19,6 @@ public class MagicStone : MonoBehaviour
     public void ModifyStoneCount()
     {
         StoneCount += 1;
-        print("Modify stone count now " + StoneCount);
 
         SetStoneCount(StoneCount);
     }
