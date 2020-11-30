@@ -3158,20 +3158,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius posuere
-      sapien. Donec posuere dui quis augue euismod, et pulvinar est efficitur. Pellentesque
-      sed lobortis lorem.
-    - Donec pretium nisl mattis orci suscipit, vel accumsan diam vestibulum. Vivamus
-      in enim ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-      per inceptos himenaeos. Proin id consequat justo, sit amet facilisis quam.
-      Proin nisi purus, efficitur at facilisis sit amet, tincidunt eget metus. Sed
-      tincidunt nisi at nibh fringilla, eu pulvinar risus fermentum.
-    - 'Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus pretium
-      tincidunt tortor et tempus. '
-    - 'In efficitur dui at faucibus vehicula. Morbi commodo eu eros a porttitor.
-      Mauris pretium porta turpis a accumsan. '
-    - 'Curabitur efficitur sed justo nec tristique. Vivamus vitae interdum lacus.
-      Integer ut justo bibendum, pretium nisi vitae, varius libero. '
+    - In a planet in a far, far away galaxy, a child princess escaped from the tyrannical
+      rule of a king. Held captive were the parents of the Princess Belen.
+    - The only way to free them was to gather the 10 power stones that can only be
+      found in a distant planet to defeat the 9 monsters guarding the palace.
+    - The tenth power stone was the only weapon to render the king powerless so she
+      can free her parents, and re-install her father to the throne.
+    - "The distant planet, Edgardoo, is also guarded by ten savage creatures, each
+      protecting the power stones embedded in the idols adorning their temples. \r"
+    - 'And so the journey and adventure begins ... as Princess Belen pits her wit
+      and skills against the monster-creatures guarding the stones, her journey back,
+      and her fight to save their kingdom. '
 --- !u!1 &1491118671
 GameObject:
   m_ObjectHideFlags: 0
