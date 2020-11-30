@@ -16,7 +16,7 @@ public class MagicStoneUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _txtStone.text = currentStoneCount.ToString();
+        _txtStone.text = "Stones: " + currentStoneCount.ToString();
     }
 
     public void SetStoneCount(int newStoneCount)
