@@ -19,10 +19,11 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            FireWeapon(_camTransform);
+            FireWeaponTest(_camTransform);
         }
+        //GetMousePosition();
     }
 
     void FireWeapon(Transform camera)
@@ -49,6 +50,31 @@ public class WeaponManager : MonoBehaviour
         }
     }// Fire weapon
 
+    void FireWeaponTest(Transform camera)
+    {
+        if (_fireTiming <= Time.time - _fireRate)
+        {
+            // PlayFireVfx();
+            /*ChaScript chaScript = GetComponent<ChaScript>();
+            chaScript.FireWeapon();*/
+
+            _fireTiming = Time.time;
+
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, Mathf.Infinity))
+            {
+
+                GameObject mark = Instantiate(decal);
+                mark.transform.position = hit.point;
+                mark.transform.LookAt(hit.point + hit.normal);
+                ApplyForce(hit);
+                ModifyHealth(hit);
+            }
+
+        }
+    }// Fire weapon
+  
+
     public virtual void ApplyForce(RaycastHit hit)
     {
         hit.rigidbody?.AddForce(-hit.normal * _impactForce);
@@ -62,4 +88,7 @@ public class WeaponManager : MonoBehaviour
             target.SendMessage(nameof(ModifyHealth), _damageAmount, SendMessageOptions.DontRequireReceiver);
         }
     }// Modify health
+
+
+    
 }
