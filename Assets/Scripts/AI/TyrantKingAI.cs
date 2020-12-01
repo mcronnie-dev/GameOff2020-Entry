@@ -129,6 +129,7 @@ public class TyrantKingAI : MonoBehaviour
         if (health <= 0)
         {
             isDead = true;
+            FindObjectOfType<LevelLoader>().LoadNextLevel();
             Invoke("Destroyy", 1.5f);
         }
     }
