@@ -27,7 +27,7 @@ public class SpawnInfinityStones : MonoBehaviour
     void SpawnTheInfinityStones() {
         Vector3 pos = center + new Vector3(
             Random.Range(-size.x / 2, size.x / 2),
-            3,
+            4,
             Random.Range(-size.z / 2, size.z / 2)
         );
 
