@@ -12,20 +12,19 @@ public class NPCQuestor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!collided) StartCoroutine(PauseForAWhile());
-        questCanvas.SetActive(collided);
-        
     }
 
     IEnumerator PauseForAWhile() {
         yield return new WaitForSeconds(5.0f);
     }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             print("yown enter");
             collided = true;
+            questCanvas.SetActive(collided);        
         }
     }
 
@@ -35,6 +34,9 @@ public class NPCQuestor : MonoBehaviour
         {
             print("yown exit");
             collided = false;
+            if (!collided) StartCoroutine(PauseForAWhile());
+            questCanvas.SetActive(collided);        
+
         }
     }
 }
