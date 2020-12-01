@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
+   public AudioClip[] audioClips;
+ 
     private Transform _camTransform;
 
     [SerializeField] GameObject decal;
@@ -21,6 +23,16 @@ public class WeaponManager : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    IEnumerator StartAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.Play();
+        yield return new WaitForSeconds(0f);
+        audio.clip = audioClips[Random.Range(0, audioClips.Length)];
+        audio.volume = Random.Range(0f, 1f);
+        audio.Play();
+    }
     void Update()
     {
         LookAtMousePosition();
@@ -68,7 +80,7 @@ public class WeaponManager : MonoBehaviour
                 //rb.AddForce(transform.InverseTransformPoint(hit.point) * 10f, ForceMode.Impulse); // test
                 rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
                 rb.AddForce(transform.up * 3, ForceMode.Impulse);
-                
+                StartCoroutine(StartAudio());                
             }
 
         }

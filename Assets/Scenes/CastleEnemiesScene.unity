@@ -637,6 +637,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0327a165632464518bc224dbea7120af, type: 3}
     - target: {fileID: 1754036100, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754036100, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
       propertyPath: _fireRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -653,6 +657,14 @@ PrefabInstance:
       propertyPath: attackPoint
       value: 
       objectReference: {fileID: 712247946}
+    - target: {fileID: 1754036100, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: df990db31c202452c93595fcc82c744b, type: 3}
+    - target: {fileID: 1754036100, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7821ef871f1a04da2a15e2beebccc6ba, type: 3}
     - target: {fileID: 4426228947409699703, guid: bd5ad5a0df9ce564f936bfa071cb8720,
         type: 3}
       propertyPath: m_Layer
