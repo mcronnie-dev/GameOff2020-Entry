@@ -160,6 +160,7 @@ public class AutoAttackAI : MonoBehaviour
     private void Destroyy()
     {
         Instantiate(dieVfx, transform.position, transform.rotation);
+        FindObjectOfType<Moonster>().ModifyMoonsterCount();
         Destroy(gameObject);
     }
 
