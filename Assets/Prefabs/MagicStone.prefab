@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7758f18a2da48241b250dcf85546417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questCanvas: {fileID: 0}
+  questCanvasText: {fileID: 0}
   timer: 0
-  myFx: {fileID: 336780630}
-  stonePickupFx: {fileID: 8300000, guid: 35cc5875b0df84ea6a7f055aa5681755, type: 3}
 --- !u!82 &336780630
 AudioSource:
   m_ObjectHideFlags: 0

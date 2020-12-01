@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class MagicStone : MonoBehaviour
@@ -21,6 +22,7 @@ public class MagicStone : MonoBehaviour
             go.SendMessage(nameof(SetStoneCount), newStoneCount, SendMessageOptions.DontRequireReceiver);
         }
     }
+
 
     public void ModifyStoneCount()
     {
