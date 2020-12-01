@@ -20,12 +20,14 @@ public class AutoAttackAI : MonoBehaviour
     public float walkPointRange;
 
     //Attack Player
+    public Transform attackPoint;
     public float timeBetweenAttacks;
     private float timeAttackAnim;
     bool alreadyAttacked;
 
     //States
     public bool isDead;
+    [SerializeField] ParticleSystem dieVfx;
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
@@ -123,10 +125,10 @@ public class AutoAttackAI : MonoBehaviour
             Run(false);
 
             //Attack
-            /*Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody rb = Instantiate(projectile, attackPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
 
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8, ForceMode.Impulse);*/
+            rb.AddForce(transform.up * 3, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke("ResetAttack", timeBetweenAttacks);
@@ -148,14 +150,16 @@ public class AutoAttackAI : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        print("Enemy Health: " + health);
 
-        if (health < 0){
+        if (health <= 0){
             isDead = true;
-            Invoke("Destroyy", 2.8f);
+            Invoke("Destroyy", .5f);
         }
     }
     private void Destroyy()
     {
+        Instantiate(dieVfx, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

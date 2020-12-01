@@ -18,6 +18,8 @@ public class FollowMouse : MonoBehaviour
         Vector3 position = Input.mousePosition;
         position.z = -Camera.main.transform.position.z;
         //position = Camera.main.ScreenToWorldPoint(position);
+        position.x += 20f * Time.deltaTime;
+        position.y += 20f * Time.deltaTime;
 
         transform.position = position;
     }
