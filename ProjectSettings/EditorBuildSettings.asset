@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CastleEnemiesScene.unity
     guid: a1eb4c7c855f1f54fa7c71138e2db808
+  - enabled: 1
+    path: Assets/Scenes/PreEndingScene.unity
+    guid: 01b6bd8c68d165f4a941ad58b7b5c18d
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: dfebfebbb49c6ab40890a052eff7625f
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
