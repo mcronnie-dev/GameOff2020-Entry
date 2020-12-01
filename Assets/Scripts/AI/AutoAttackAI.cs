@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class AutoAttackAI : MonoBehaviour
 {
+    public AudioClip audioClip;
+
     public NavMeshAgent agent;
 
     public Transform player;
@@ -35,6 +38,15 @@ public class AutoAttackAI : MonoBehaviour
     public Material green, red, yellow;
     public GameObject projectile;
 
+    IEnumerator StartAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.Play();
+        yield return new WaitForSeconds(0f);
+        audio.clip = audioClip;
+        audio.Play();
+    }
     private void Awake()
     {
         player = GameObject.Find("JellyFishGirl").transform;
@@ -154,6 +166,7 @@ public class AutoAttackAI : MonoBehaviour
 
         if (health <= 0){
             isDead = true;
+            StartCoroutine(StartAudio());
             Invoke("Destroyy", .5f);
         }
     }
