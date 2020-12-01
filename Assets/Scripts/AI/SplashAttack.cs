@@ -46,6 +46,7 @@ public class SplashAttack : MonoBehaviour
                 }
 
             health.ModifyHealth(damage);
+            Destroy(gameObject);
         }
     }
 }

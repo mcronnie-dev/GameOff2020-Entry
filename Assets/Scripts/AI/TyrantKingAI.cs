@@ -93,8 +93,8 @@ public class TyrantKingAI : MonoBehaviour
                 TriggerNormalAttack();
 
                 //Attack
-                Instantiate(Splash1, transform.position, transform.rotation);
-                Invoke("DestroySplash1", 1.5f);
+                //Instantiate(Splash1, transform.position, transform.rotation);
+                
             }
 
             else
@@ -187,10 +187,7 @@ public class TyrantKingAI : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void DestroySplash1()
-    {
-        Destroy(Splash1);
-    }
+   
 
 
 
