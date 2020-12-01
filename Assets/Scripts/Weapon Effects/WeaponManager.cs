@@ -111,7 +111,7 @@ public class WeaponManager : MonoBehaviour
                 && Input.mousePosition.y < (ScreenTop * .8) && Input.mousePosition.x < (ScreenRight * 1))
             {
                 
-                    print("Mouse within range");
+                   
                     // Generate a plane that intersects the transform's position with an upwards normal.
                     Plane playerPlane = new Plane(Vector3.up, transform.position);
 

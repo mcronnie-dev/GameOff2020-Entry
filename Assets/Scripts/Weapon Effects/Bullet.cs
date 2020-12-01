@@ -135,6 +135,15 @@ public class Bullet : MonoBehaviour
             int _damageAmount = 20;
             enemy.SendMessage("TakeDamage", _damageAmount, SendMessageOptions.DontRequireReceiver);
         }
+
+        TyrantKingAI enemyBoss = other.GetComponent<TyrantKingAI>();
+        if (enemyBoss != null)
+        {
+
+            print("ontrigger ENEMYBOSS");
+            int _damageAmount = 20;
+            enemyBoss.SendMessage("TakeDamage", _damageAmount, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
 }
