@@ -29,9 +29,11 @@ public class WeaponManager : MonoBehaviour
 
         audio.Play();
         yield return new WaitForSeconds(0f);
-        audio.clip = audioClips[Random.Range(0, audioClips.Length)];
-        audio.volume = Random.Range(0f, 1f);
-        audio.Play();
+        if (audioClips.Length != 0) {
+            audio.clip = audioClips[Random.Range(0, audioClips.Length)];
+            audio.volume = Random.Range(0f, 1f);
+            audio.Play();
+        }
     }
     void Update()
     {
