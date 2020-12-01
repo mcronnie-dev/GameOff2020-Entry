@@ -1343,6 +1343,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1754036097, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754036097, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
       propertyPath: stoneAware.Array.data[0]
       value: 
       objectReference: {fileID: 1204765777}
@@ -1358,6 +1362,22 @@ PrefabInstance:
       propertyPath: questCanvasText
       value: 
       objectReference: {fileID: 590635414}
+    - target: {fileID: 1754036097, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38af7f950ca6e46caa431192ac15f26c, type: 3}
+    - target: {fileID: 1754036097, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9142a6185b4d34fe8a9c014edd2ab61b, type: 3}
+    - target: {fileID: 1754036097, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ad042423d774129a68872fc81b3e4c, type: 3}
+    - target: {fileID: 1754036097, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1df886e2bc9674c808674d1864f10fd0, type: 3}
     - target: {fileID: 1754036098, guid: bd5ad5a0df9ce564f936bfa071cb8720, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -9530,6 +9550,102 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 48890581}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &445990056
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445990055}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &445990064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12372,7 +12488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Hurry! Collect the 10 power stones before anyone else does!
 --- !u!222 &590635415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24792,7 +24908,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079343456}
-  m_LocalRotation: {x: -0.0000000015456406, y: 0.99821764, z: -0.05967899, w: -0.00000002585308}
+  m_LocalRotation: {x: -4.179815e-18, y: 0.99821764, z: -0.059678968, w: -1.300974e-15}
   m_LocalPosition: {x: -116.9, y: 6.99, z: -11.799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -35610,7 +35726,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556811659}
-  m_LocalRotation: {x: -0.0000000015456406, y: 0.99821764, z: -0.05967899, w: -0.00000002585308}
+  m_LocalRotation: {x: -4.179815e-18, y: 0.99821764, z: -0.059678968, w: -1.300974e-15}
   m_LocalPosition: {x: -116.9, y: 6.99, z: -11.799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

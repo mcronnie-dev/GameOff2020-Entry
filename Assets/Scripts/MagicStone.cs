@@ -7,13 +7,23 @@ using UnityEngine.UI;
 
 public class MagicStone : MonoBehaviour
 {
-
+    public AudioClip[] audioClips;
     public Animator transition;
 
     public float transitionTime = 1f;
 
     public int StoneCount;
     public GameObject[] stoneAware;
+
+    IEnumerator StartAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.Play();
+        yield return new WaitForSeconds(0f);
+        audio.clip = audioClips[Random.Range(0, audioClips.Length)];
+        audio.Play();
+    }
 
     public void SetStoneCount(int newStoneCount)
     {
@@ -27,6 +37,7 @@ public class MagicStone : MonoBehaviour
     public void ModifyStoneCount()
     {
         StoneCount += 1;
+        StartCoroutine(StartAudio());
 
         SetStoneCount(StoneCount);
 

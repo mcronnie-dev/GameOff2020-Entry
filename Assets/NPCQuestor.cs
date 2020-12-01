@@ -12,10 +12,14 @@ public class NPCQuestor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!collided) StartCoroutine(PauseForAWhile());
         questCanvas.SetActive(collided);
-        questCanvasText.text = "You must hurry! Find the 10 power stones before anyone else does!";
+        
     }
 
+    IEnumerator PauseForAWhile() {
+        yield return new WaitForSeconds(5.0f);
+    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
