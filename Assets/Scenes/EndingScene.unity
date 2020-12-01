@@ -430,7 +430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &175873317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,18 +1126,18 @@ MonoBehaviour:
   dialogue:
   - name: 
     sentences:
-    - "Princess Belen defeated the Tyrant King using the power of the \r10th power
+    - "Princess Belen defeated the Tyrant King Edgardoo using the power of the \r10th
       stone. The Tyrant King was finally defeated, his\r body forever imprisoned
       in the death rays that\r surrounds his prison."
     - "The kingdom restored Princess Belen's father to the throne\r and she worked
       on envisioning a greater happier \rkingdom as she awaits her time to ascend
       to the \rseat of power."
-    - The End.
-    - 'Thank you for playing the game and bearing with us. We hope you enjoyed!
+    - 'We hope you enjoyed playing Moonster Shoot! Hope to see you again in the future
+      once we finish fully the development of the game. Thank you!!!
 
 
-      -
-      Veronica & Sarah
+      - Veronica
+      & Sarah
 
       Game Designers / Programmers
 
@@ -1146,6 +1146,7 @@ MonoBehaviour:
 
       Storyline
       Writer'
+    - -= The End =-
 --- !u!1 &1491118671
 GameObject:
   m_ObjectHideFlags: 0
