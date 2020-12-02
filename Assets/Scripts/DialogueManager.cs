@@ -30,6 +30,15 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    public void Update () {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("enter") || Input.GetKeyDown(KeyCode.Return)
+
+) {
+            DisplayNextSentence();
+        }
+
+    }
+
     public void DisplayNextSentence() { 
         if (sentences.Count == 0)
         {
