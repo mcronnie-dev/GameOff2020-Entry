@@ -81,7 +81,7 @@ public class WeaponManager : MonoBehaviour
                 Rigidbody rb = Instantiate(decal, attackPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
                 //rb.AddForce(transform.InverseTransformPoint(hit.point) * 10f, ForceMode.Impulse); // test
                 rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-                rb.AddForce(transform.up * 3, ForceMode.Impulse);
+                rb.AddForce(transform.up * 2, ForceMode.Impulse);
                 StartCoroutine(StartAudio());                
             }
 
